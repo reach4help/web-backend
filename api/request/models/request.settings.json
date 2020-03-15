@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "requests",
+  "info": {
+    "name": "Request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "solving",
+        "solved",
+        "failed"
+      ]
+    },
+    "issuer": {
+      "via": "requests_created",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "solver": {
+      "via": "requests_solved",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

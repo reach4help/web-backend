@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "components_general_addresses",
+  "info": {
+    "name": "address",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    }
+  }
+}
